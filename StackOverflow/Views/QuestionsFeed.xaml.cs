@@ -1,4 +1,6 @@
 ﻿using SO.Client.Post;
+using StackOverflow.Utils;
+using System.Threading.Tasks;
 using System.Windows.Controls;
 
 namespace StackOverflow.Views
@@ -13,7 +15,7 @@ namespace StackOverflow.Views
             InitializeComponent();
 
             var postClient = new PostClient();
-            var questions = postClient.GetUnAnsweredQuestions().Result;
+            var questionsTask = new NotifyTaskCompletion<QuestionResponseSM>(postClient.GetUnAnsweredQuestions());
         }
     }
 }
