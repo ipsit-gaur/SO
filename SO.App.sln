@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SO.Process.Base", "SO.Proce
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SO.Process.Post", "SO.Process.Post\SO.Process.Post.csproj", "{5DB3DAB7-F510-4E52-B4A9-B3BEB934A888}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOWebApp", "SOWebApp\SOWebApp.csproj", "{51207BA6-919D-49C4-958D-824E9B335B0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{5DB3DAB7-F510-4E52-B4A9-B3BEB934A888}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DB3DAB7-F510-4E52-B4A9-B3BEB934A888}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DB3DAB7-F510-4E52-B4A9-B3BEB934A888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51207BA6-919D-49C4-958D-824E9B335B0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51207BA6-919D-49C4-958D-824E9B335B0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51207BA6-919D-49C4-958D-824E9B335B0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51207BA6-919D-49C4-958D-824E9B335B0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
