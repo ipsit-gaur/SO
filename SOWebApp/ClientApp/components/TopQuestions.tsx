@@ -1,17 +1,23 @@
 ﻿import * as React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { Question } from './Question';
 
 interface TopQuestionsState {
     filters: string[];
     currentFilter: string;
-    questions: string[];
+    questions: QuestionState[];
 }
 
-export class TopQuestions extends React.Component<TopQuestionsState> {
+export class TopQuestions extends React.Component<{}, TopQuestionsState> {
     constructor() {
         super();
+        this.state = { filters: [], currentFilter: '', questions: [] };
 
-        this.state = { filters: [], currentFilter: null, questions: [] };
+        fetch('api/Questions')
+            .then(response => response.json() as Promise<QuestionState[]>)
+            .then(data => {
+                this.setState({ questions: data });
+            });
     }
 
     public render() {
@@ -26,8 +32,22 @@ export class TopQuestions extends React.Component<TopQuestionsState> {
                 </div>
             </div>
             <div className="filters">
-                {this.state.filters}
+            </div>
+
+            <div className="ques-wrapper">
+                {this.state.questions.map(question => <Question value={question} key={question.id} />)}
             </div>
         </div>;
     }
+}
+
+export interface QuestionState {
+    votes: number;
+    answers: number;
+    views: number;
+    description: string;
+    tags: string[];
+    timeAsked: string;
+    id: number;
+    author: string;
 }
